@@ -1,16 +1,7 @@
 const path = require('path');
+const HelloWorldPlugin = require('./plugins/HelloWorldPlugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
-function HelloWorldPlugin(options) {
-  // Setup the plugin instance with options...
-}
-
-HelloWorldPlugin.prototype.apply = function(compiler) {
-  compiler.plugin('done', function() {
-    console.log('Hello World!');
-  });
-};
-
-module.exports = HelloWorldPlugin;
 module.exports = {
   entry: './src/index.js',
   output: {
@@ -19,5 +10,6 @@ module.exports = {
   },
   plugins: [
     new HelloWorldPlugin({ options: true }),
+    new UglifyJsPlugin(),
   ],
 };
