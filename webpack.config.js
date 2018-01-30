@@ -1,6 +1,9 @@
 const path = require('path');
+/* const UglifyJsPlugin = require('uglifyjs-webpack-plugin');*/
 const HelloWorldPlugin = require('./plugins/HelloWorldPlugin');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const HelloCompilationPlugin = require('./plugins/HelloCompilationPlugin');
+const HelloAsyncPlugin = require('./plugins/HelloAsyncPlugin');
+const FileListPlugin = require('./plugins/FileListPlugin');
 
 module.exports = {
   entry: './src/index.js',
@@ -9,7 +12,10 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
   },
   plugins: [
+    new HelloAsyncPlugin(),
+    new HelloCompilationPlugin(),
     new HelloWorldPlugin({ options: true }),
-    new UglifyJsPlugin(),
+    new FileListPlugin(),
+    /* new UglifyJsPlugin(),*/
   ],
 };
