@@ -1,5 +1,5 @@
 const path = require('path');
-/* const UglifyJsPlugin = require('uglifyjs-webpack-plugin');*/
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const HelloWorldPlugin = require('./plugins/HelloWorldPlugin');
 const HelloCompilationPlugin = require('./plugins/HelloCompilationPlugin');
 const HelloAsyncPlugin = require('./plugins/HelloAsyncPlugin');
@@ -15,7 +15,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
   },
   plugins: [
-    /* new UglifyJsPlugin(),*/
+    new UglifyJsPlugin(),
     /* new HelloAsyncPlugin(),*/
     /* new HelloCompilationPlugin(),*/
     /* new HelloWorldPlugin({ options: true }),*/
@@ -23,7 +23,8 @@ module.exports = {
     /* new CompilationInspectPlugin(),*/
     /* new WatchFilePlugin(),*/
     new webpack.ProvidePlugin({
-      _: 'lodash',
+      /* _: 'lodash',*/
+      join: ['lodash', 'join'],
     }),
   ],
 };
