@@ -1,17 +1,20 @@
 const path = require('path');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const HelloWorldPlugin = require('./plugins/HelloWorldPlugin');
-const HelloCompilationPlugin = require('./plugins/HelloCompilationPlugin');
-const HelloAsyncPlugin = require('./plugins/HelloAsyncPlugin');
-const FileListPlugin = require('./plugins/FileListPlugin');
-const CompilationInspectPlugin = require('./plugins/CompilationInspectPlugin');
-const WatchFilePlugin = require('./plugins/WatchFilePlugin');
 const webpack = require('webpack');
+/* const UglifyJsPlugin = require('uglifyjs-webpack-plugin');*/
+/* const HelloWorldPlugin = require('./plugins/HelloWorldPlugin');*/
+/* const HelloCompilationPlugin = require('./plugins/HelloCompilationPlugin');*/
+/* const HelloAsyncPlugin = require('./plugins/HelloAsyncPlugin');*/
+/* const FileListPlugin = require('./plugins/FileListPlugin');*/
+/* const CompilationInspectPlugin = require('./plugins/CompilationInspectPlugin');*/
+/* const WatchFilePlugin = require('./plugins/WatchFilePlugin');*/
 
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    polyfills: './src/polyfills.js',
+    index: './src/index.js',
+  },
   output: {
-    filename: 'bundle.js',
+    filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
   plugins: [
