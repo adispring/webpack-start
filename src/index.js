@@ -1,3 +1,4 @@
+import 'babel-polyfill';
 /* import _ from 'lodash';*/
 import { ComponentA as componentA } from '../component';
 /* import { add } from 'ramda';*/

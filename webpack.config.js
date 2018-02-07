@@ -15,7 +15,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
   },
   plugins: [
-    new UglifyJsPlugin(),
+    /* new UglifyJsPlugin(),*/
     /* new HelloAsyncPlugin(),*/
     /* new HelloCompilationPlugin(),*/
     /* new HelloWorldPlugin({ options: true }),*/
