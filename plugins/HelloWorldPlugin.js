@@ -2,8 +2,8 @@ function HelloWorldPlugin(options) {
   // Setup the plugin instance with options...
 }
 
-HelloWorldPlugin.prototype.apply = function(compiler) {
-  compiler.plugin('done', function() {
+HelloWorldPlugin.prototype.apply = (compiler) => {
+  compiler.plugin('done', () => {
     console.log('Hello World!');
   });
 };
