@@ -71,11 +71,14 @@
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* WEBPACK VAR INJECTION */(function(join) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__component__ = __webpack_require__(332);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__export_demo_js__ = __webpack_require__(335);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__export_demo_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__export_demo_js__);
 /* import 'babel-polyfill';*/
 /* import _ from 'lodash';*/
 
 /* import { add } from 'ramda';*/
 /* import * as Component from '../component';*/
+
 function component() {
   /* Component.ComponentA('hello');*/
 
@@ -89,13 +92,6 @@ function component() {
 
 document.body.appendChild(component());
 
-fetch('https://jsonplaceholder.typicode.com/users')
-  .then(response => response.json())
-  .then(json => {
-    console.log('We retrieved some data! AND we\'re confident it will work on a variety of browser distributions.')
-    console.log(json)
-  })
-  .catch(error => console.error('Something went wrong when fetching this data: ', error))
 
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(330)["join"]))
 
@@ -17203,7 +17199,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
   }
 }.call(this));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(49), __webpack_require__(331)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(46), __webpack_require__(331)(module)))
 
 /***/ }),
 
@@ -17275,7 +17271,25 @@ const componentAFunc = val => console.log(`ComponentA: ${val}`);
 
 /***/ }),
 
-/***/ 49:
+/***/ 335:
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(global) {module.exports = global["appName"] = __webpack_require__(336);
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(46)))
+
+/***/ }),
+
+/***/ 336:
+/***/ (function(module, exports) {
+
+module.exports = function() {
+  console.log('Inject to window sucess!');
+};
+
+
+/***/ }),
+
+/***/ 46:
 /***/ (function(module, exports) {
 
 var g;

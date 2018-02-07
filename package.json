@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
+    "expose-loader": "^0.7.4",
     "lodash": "^4.17.4",
     "ramda": "^0.25.0",
     "whatwg-fetch": "^2.0.3"

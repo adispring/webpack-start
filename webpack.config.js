@@ -13,6 +13,15 @@ module.exports = {
     polyfills: './src/polyfills.js',
     index: './src/index.js',
   },
+  module: {
+    rules: [{
+      test: require.resolve('./src/export-demo.js'),
+      use: [{
+        loader: 'expose-loader',
+        options: 'appName',
+      }],
+    }],
+  },
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
