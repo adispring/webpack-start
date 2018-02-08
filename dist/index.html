@@ -5,7 +5,6 @@
      var modernBrowser = (
        'fetch' in window && 'assign' in Object
      )
-     console.log(modernBrowser);
      if (!modernBrowser) {
        var scriptElement = document.createElement('script');
 
@@ -17,6 +16,7 @@
   </head>
   <body>
     <script src="index.bundle.js"></script>
+    <script src="demo.bundle.js"></script>
     <script>
      window.appName();
     </script>

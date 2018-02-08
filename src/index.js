@@ -3,7 +3,7 @@
 import { ComponentA as componentA } from '../component';
 /* import { add } from 'ramda';*/
 /* import * as Component from '../component';*/
-import './export-demo.js';
+/* import './export-demo.js';*/
 function component() {
   /* Component.ComponentA('hello');*/
 

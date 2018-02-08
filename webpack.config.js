@@ -12,6 +12,7 @@ module.exports = {
   entry: {
     polyfills: './src/polyfills.js',
     index: './src/index.js',
+    demo: './src/export-demo.js',
   },
   module: {
     rules: [{

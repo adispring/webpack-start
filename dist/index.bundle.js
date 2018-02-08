@@ -71,14 +71,12 @@
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* WEBPACK VAR INJECTION */(function(join) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__component__ = __webpack_require__(332);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__export_demo_js__ = __webpack_require__(335);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__export_demo_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__export_demo_js__);
 /* import 'babel-polyfill';*/
 /* import _ from 'lodash';*/
 
 /* import { add } from 'ramda';*/
 /* import * as Component from '../component';*/
-
+/* import './export-demo.js';*/
 function component() {
   /* Component.ComponentA('hello');*/
 
@@ -17199,7 +17197,7 @@ document.body.appendChild(component());
   }
 }.call(this));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(46), __webpack_require__(331)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(42), __webpack_require__(331)(module)))
 
 /***/ }),
 
@@ -17271,25 +17269,7 @@ const componentAFunc = val => console.log(`ComponentA: ${val}`);
 
 /***/ }),
 
-/***/ 335:
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function(global) {module.exports = global["appName"] = __webpack_require__(336);
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(46)))
-
-/***/ }),
-
-/***/ 336:
-/***/ (function(module, exports) {
-
-module.exports = function() {
-  console.log('Inject to window sucess!');
-};
-
-
-/***/ }),
-
-/***/ 46:
+/***/ 42:
 /***/ (function(module, exports) {
 
 var g;
